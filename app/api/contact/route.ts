@@ -1,4 +1,3 @@
-import { site } from "@/lib/site";
 import { contactSchema } from "@/lib/validations";
 import { NextResponse } from "next/server";
 
