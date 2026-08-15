@@ -1,8 +1,8 @@
-# Haven Path Therapy
+# Rowan Vale Therapy
 
-A premium, editorial website for a private therapy practice. Next.js, TypeScript, and Tailwind CSS.
+A premium, editorial website for a private therapy practice in **New York City**. Next.js, TypeScript, and Tailwind CSS.
 
-Practice name, clinician bio, fees, and location are **sample content**. Edit `lib/site.ts` before you publish.
+Clinician bio, fees, and the studio address are still sample details. Edit `lib/site.ts` before you publish.
 
 ## Pages
 

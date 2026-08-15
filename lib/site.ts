@@ -1,26 +1,26 @@
 export const site = {
-  name: "Haven Path Therapy",
-  shortName: "Haven Path",
+  name: "Rowan Vale Therapy",
+  shortName: "Rowan Vale",
   clinician: {
     name: "Alex Rivera, LMFT",
     firstName: "Alex",
     credentials: "Licensed Marriage and Family Therapist",
-    license: "LMFT 000000 · Sample credentials — replace before launch",
+    license: "Licensed in New York State · LMFT",
     education: "M.A., Marriage and Family Therapy",
   },
   tagline: "A quiet place to begin again.",
   description:
-    "Private therapy for adults and couples navigating anxiety, relationships, grief, and the seasons that ask more of you. Telehealth and in-person sessions.",
-  url: "https://havenpath.example",
+    "Private therapy in New York City for adults and couples navigating anxiety, relationships, grief, and the seasons that ask more of you. In-person in NYC and telehealth across New York State.",
+  url: "https://rowanvale.example",
   location: {
-    city: "Your City, ST",
-    serving: "Telehealth throughout the licensed state · In-person by appointment",
-    address: "Studio address — update in lib/site.ts",
+    city: "New York, NY",
+    serving: "In-person in New York City · Telehealth throughout New York State",
+    address: "New York, NY · Studio visits by appointment",
   },
   contact: {
-    email: "hello@havenpath.example",
-    phone: "(555) 010-2040",
-    hours: "Monday–Thursday, 10am–6pm",
+    email: "hello@rowanvale.example",
+    phone: "(212) 555-0148",
+    hours: "Tuesday–Friday, 10am–7pm",
   },
   bookingUrl: "/contact",
   nav: [
@@ -32,16 +32,16 @@ export const site = {
     { href: "/contact", label: "Contact" },
   ],
   hero: {
-    eyebrow: "Private psychotherapy",
+    eyebrow: "Private psychotherapy · New York City",
     title: "Therapy for the life that looks fine — and does not feel that way.",
-    lede: "A considered practice for adults who want more than coping. We work slowly, privately, and with the whole of you in the room.",
+    lede: "A considered New York practice for adults who want more than coping. We work slowly, privately, and with the whole of you in the room.",
   },
   about: {
     lede: "I work with people who are used to holding it together — and are tired of doing it alone.",
     paragraphs: [
       "Many of the people who find this practice are high-functioning on paper. They lead teams, care for families, and still wake at 3am with a tight chest. They are not looking for a pep talk. They want a room where the truth can be said without being fixed too quickly.",
       "I trained as a marriage and family therapist because people do not heal in isolation. Even individual work is relational: the family you came from, the partner you cannot quite reach, the culture that taught you what you were allowed to feel.",
-      "Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
+      "The practice is based in New York City, with in-person sessions by appointment and secure telehealth for clients anywhere in New York State. Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
     ],
   },
   specialties: [
@@ -140,7 +140,7 @@ export const site = {
     },
     {
       q: "Do you offer telehealth?",
-      a: "Yes. Secure video is available for clients located in the licensed state. In-person sessions can be scheduled as well.",
+      a: "Yes. Secure video is available for clients physically located in New York State. In-person sessions are held in New York City by appointment.",
     },
     {
       q: "How often will we meet?",
