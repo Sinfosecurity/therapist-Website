@@ -9,7 +9,7 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-content px-5 sm:px-8", className)}>
+    <div className={cn("mx-auto w-full max-w-content px-6 sm:px-10", className)}>
       {children}
     </div>
   );
@@ -25,7 +25,7 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("py-20 sm:py-28", className)}>
+    <section id={id} className={cn("py-24 sm:py-32", className)}>
       {children}
     </section>
   );
@@ -33,8 +33,12 @@ export function Section({
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <p className="mb-3 text-xs font-semibold uppercase tracking-wideish text-sage-600">
+    <p className="mb-5 text-[11px] font-medium uppercase tracking-wideish text-gold-600">
       {children}
     </p>
   );
+}
+
+export function Rule({ className }: { className?: string }) {
+  return <div className={cn("h-px w-16 bg-gold-500/70", className)} />;
 }

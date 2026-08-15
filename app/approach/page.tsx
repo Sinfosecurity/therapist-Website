@@ -1,4 +1,4 @@
-import { Container, Eyebrow, Section } from "@/components/ui/Layout";
+import { Container, Eyebrow, Rule, Section } from "@/components/ui/Layout";
 import { site } from "@/lib/site";
 import type { Metadata } from "next";
 
@@ -11,26 +11,32 @@ export default function ApproachPage() {
   return (
     <Section>
       <Container>
-        <Eyebrow>Approach</Eyebrow>
-        <h1 className="max-w-3xl font-display text-5xl text-sage-900">
-          Curious, collaborative, and paced with your nervous system.
-        </h1>
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <div className="max-w-3xl">
+          <Eyebrow>Approach</Eyebrow>
+          <h1 className="font-display text-5xl leading-tight text-forest-900 sm:text-6xl">
+            Curious, collaborative, and paced with your nervous system.
+          </h1>
+        </div>
+        <div className="mt-20 grid gap-16 lg:grid-cols-3">
           {site.approach.map((item) => (
-            <article key={item.title} className="rounded-3xl bg-cream-100 p-8">
-              <h2 className="font-display text-3xl text-sage-800">{item.title}</h2>
-              <p className="mt-4 leading-relaxed text-ink-600">{item.body}</p>
+            <article key={item.title}>
+              <Rule />
+              <h2 className="mt-6 font-display text-3xl text-forest-800">{item.title}</h2>
+              <p className="mt-4 leading-8 text-ink-700">{item.body}</p>
             </article>
           ))}
         </div>
-        <div className="mt-16 max-w-prose">
-          <h2 className="font-display text-3xl text-sage-900">Modalities</h2>
-          <p className="mt-4 text-ink-600">
+        <div className="mt-24 max-w-prose border-t border-parchment-200 pt-12">
+          <h2 className="font-display text-3xl text-forest-900">Modalities</h2>
+          <p className="mt-4 leading-8 text-ink-700">
             Training is a toolbox, not a script. Sessions may draw from:
           </p>
-          <ul className="mt-4 space-y-2 text-ink-600">
+          <ul className="mt-6 space-y-3 text-ink-700">
             {site.modalities.map((item) => (
-              <li key={item}>· {item}</li>
+              <li key={item} className="flex gap-3">
+                <span className="mt-2 h-px w-6 shrink-0 bg-gold-500" />
+                {item}
+              </li>
             ))}
           </ul>
         </div>

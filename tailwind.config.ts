@@ -9,23 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: {
-          50: "#FBF8F2",
-          100: "#F4EFE4",
-          200: "#E8DFCC",
-          300: "#D6C8AB",
+        parchment: {
+          50: "#FBF7F0",
+          100: "#F4EDE1",
+          200: "#E7DCC8",
+          300: "#D4C3A6",
         },
-        sage: {
-          50: "#F1F5F1",
-          100: "#DEE8DE",
-          200: "#B9CDB9",
-          300: "#8AAB8C",
-          400: "#5E8A62",
-          500: "#3F6A46",
-          600: "#32563A",
-          700: "#274530",
-          800: "#1E3526",
-          900: "#15241B",
+        forest: {
+          50: "#EEF3EF",
+          100: "#D5E0D7",
+          400: "#6E8B74",
+          500: "#4A6B54",
+          600: "#385442",
+          700: "#2B4234",
+          800: "#1E3126",
+          900: "#14211A",
+        },
+        gold: {
+          400: "#C4A46A",
+          500: "#B08D57",
+          600: "#8F7040",
         },
         clay: {
           400: "#D08A6C",
@@ -33,12 +36,11 @@ const config: Config = {
           600: "#A45338",
         },
         ink: {
-          50: "#F6F4F0",
-          100: "#E7E3DB",
-          400: "#8A8376",
-          600: "#5C564C",
-          800: "#2F2C27",
-          900: "#1C1A16",
+          400: "#8A8274",
+          500: "#6B6458",
+          700: "#3C372F",
+          800: "#2A261F",
+          900: "#1A1814",
         },
       },
       fontFamily: {
@@ -46,19 +48,28 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       letterSpacing: {
-        wideish: "0.08em",
+        wideish: "0.14em",
       },
       maxWidth: {
-        content: "72rem",
-        prose: "42rem",
+        content: "74rem",
+        prose: "40rem",
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(44, 42, 38, 0.08)",
-        lift: "0 24px 60px rgba(44, 42, 38, 0.12)",
+        soft: "0 20px 60px rgba(26, 24, 20, 0.08)",
+        lift: "0 30px 80px rgba(26, 24, 20, 0.12)",
       },
       backgroundImage: {
         grain:
-          "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E\")",
+          "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E\")",
+      },
+      keyframes: {
+        rise: {
+          from: { opacity: "0", transform: "translateY(18px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        rise: "rise 0.9s ease both",
       },
     },
   },

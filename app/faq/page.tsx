@@ -1,5 +1,6 @@
+import { FaqList } from "@/components/faq/FaqList";
+import { Button } from "@/components/ui/Button";
 import { Container, Eyebrow, Section } from "@/components/ui/Layout";
-import { site } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,17 +11,23 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <Section>
-      <Container>
-        <Eyebrow>FAQ</Eyebrow>
-        <h1 className="font-display text-5xl text-sage-900">Questions people often ask first.</h1>
-        <dl className="mt-12 max-w-3xl space-y-6">
-          {site.faqs.map((item) => (
-            <div key={item.q} className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-cream-200">
-              <dt className="font-display text-2xl text-sage-800">{item.q}</dt>
-              <dd className="mt-3 leading-relaxed text-ink-600">{item.a}</dd>
-            </div>
-          ))}
-        </dl>
+      <Container className="grid gap-16 lg:grid-cols-12">
+        <div className="lg:col-span-4">
+          <Eyebrow>FAQ</Eyebrow>
+          <h1 className="font-display text-5xl leading-tight text-forest-900">
+            Questions people often ask first.
+          </h1>
+          <p className="mt-6 leading-8 text-ink-700">
+            If yours is not here, write anyway. Fit is easier to feel in conversation than on a
+            page.
+          </p>
+          <Button href="/contact" className="mt-8">
+            Ask a question
+          </Button>
+        </div>
+        <div className="lg:col-span-7 lg:col-start-6">
+          <FaqList />
+        </div>
       </Container>
     </Section>
   );

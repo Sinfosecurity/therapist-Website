@@ -1,7 +1,8 @@
 import { ContactForm } from "@/components/contact/ContactForm";
-import { Container, Eyebrow, Section } from "@/components/ui/Layout";
+import { Container, Eyebrow, Rule, Section } from "@/components/ui/Layout";
 import { site } from "@/lib/site";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -11,22 +12,36 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <Section>
-      <Container className="grid gap-12 lg:grid-cols-2">
-        <div>
+      <Container className="grid gap-16 lg:grid-cols-12">
+        <div className="lg:col-span-5">
           <Eyebrow>Contact</Eyebrow>
-          <h1 className="font-display text-5xl text-sage-900">Let us see whether this is a fit.</h1>
-          <p className="mt-5 max-w-prose leading-relaxed text-ink-600">
-            Share a little about what you are looking for. I will reply by email, usually within two
+          <h1 className="font-display text-5xl leading-tight text-forest-900">
+            Let us see whether this is a fit.
+          </h1>
+          <p className="mt-6 leading-8 text-ink-700">
+            Share a little about what you are looking for. I reply by email, usually within two
             business days. This form is not for emergencies.
           </p>
-          <ul className="mt-8 space-y-2 text-sm text-ink-600">
+          <Rule className="my-8" />
+          <ul className="space-y-2 text-sm text-ink-700">
             <li>{site.contact.email}</li>
             <li>{site.contact.phone}</li>
             <li>{site.contact.hours}</li>
             <li>{site.location.serving}</li>
           </ul>
+          <div className="relative mt-12 hidden aspect-[4/3] overflow-hidden lg:block">
+            <Image
+              src="/images/stones-water.jpg"
+              alt="Still water over stones"
+              fill
+              className="object-cover"
+              sizes="40vw"
+            />
+          </div>
         </div>
-        <ContactForm />
+        <div className="lg:col-span-6 lg:col-start-7">
+          <ContactForm />
+        </div>
       </Container>
     </Section>
   );

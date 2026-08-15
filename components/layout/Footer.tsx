@@ -3,19 +3,17 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-cream-200 bg-sage-900 text-cream-100">
-      <div className="mx-auto grid max-w-content gap-10 px-5 py-16 sm:px-8 md:grid-cols-3">
-        <div>
-          <p className="font-display text-3xl text-cream-50">{site.name}</p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream-200">
-            {site.tagline} {site.location.serving}
+    <footer className="bg-forest-900 text-parchment-100">
+      <div className="mx-auto grid max-w-content gap-14 px-6 py-20 sm:px-10 md:grid-cols-12">
+        <div className="md:col-span-5">
+          <p className="font-display text-4xl text-parchment-50">{site.name}</p>
+          <p className="mt-5 max-w-sm text-sm leading-7 text-parchment-200/80">
+            {site.tagline} A private practice for adults and couples.
           </p>
         </div>
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wideish text-sage-200">
-            Visit
-          </p>
-          <ul className="mt-4 space-y-2 text-sm">
+        <div className="md:col-span-3">
+          <p className="text-[11px] uppercase tracking-wideish text-gold-400">Visit</p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment-200">
             {site.nav.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="hover:text-white">
@@ -30,19 +28,16 @@ export function Footer() {
             </li>
           </ul>
         </div>
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wideish text-sage-200">
-            Contact
-          </p>
-          <p className="mt-4 text-sm">{site.contact.email}</p>
+        <div className="md:col-span-4">
+          <p className="text-[11px] uppercase tracking-wideish text-gold-400">Contact</p>
+          <p className="mt-5 text-sm">{site.contact.email}</p>
           <p className="text-sm">{site.contact.phone}</p>
-          <p className="mt-2 text-sm text-cream-200">{site.contact.hours}</p>
-          <p className="mt-6 text-xs leading-relaxed text-sage-200">{site.crisis.line}</p>
+          <p className="mt-3 text-sm text-parchment-200/80">{site.contact.hours}</p>
+          <p className="mt-8 max-w-sm text-xs leading-6 text-parchment-200/70">{site.crisis.line}</p>
         </div>
       </div>
-      <div className="border-t border-sage-800 px-5 py-6 text-center text-xs text-sage-200 sm:px-8">
-        © {new Date().getFullYear()} {site.name}. Therapy is not a substitute for emergency
-        care.
+      <div className="border-t border-white/10 px-6 py-6 text-center text-[11px] uppercase tracking-wideish text-parchment-200/60 sm:px-10">
+        © {new Date().getFullYear()} {site.name} · Therapy is not emergency care
       </div>
     </footer>
   );

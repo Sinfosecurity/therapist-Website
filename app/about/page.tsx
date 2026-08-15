@@ -1,59 +1,53 @@
-import { Container, Eyebrow, Section } from "@/components/ui/Layout";
+import { Button } from "@/components/ui/Button";
+import { Container, Eyebrow, Rule, Section } from "@/components/ui/Layout";
 import { site } from "@/lib/site";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Meet ${site.clinician.name} and learn about ${site.name}.`,
+  description: `Meet ${site.clinician.name}.`,
 };
 
 export default function AboutPage() {
   return (
     <Section>
-      <Container className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="prose-site max-w-prose">
+      <Container className="grid gap-16 lg:grid-cols-12">
+        <div className="lg:col-span-5">
+          <div className="relative aspect-[3/4] overflow-hidden">
+            <Image
+              src="/images/botanical.jpg"
+              alt="Botanical still life in the studio"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              priority
+            />
+          </div>
+        </div>
+        <div className="prose-site lg:col-span-6 lg:col-start-7">
           <Eyebrow>About</Eyebrow>
-          <h1 className="mb-6 font-display text-5xl text-sage-900">{site.clinician.name}</h1>
-          <p>
-            I work with adults and couples who want a place to slow down, tell the truth, and
-            practice new ways of being with themselves and the people they love.
+          <h1 className="mb-4 font-display text-5xl leading-tight text-forest-900">
+            {site.clinician.name}
+          </h1>
+          <p className="text-sm uppercase tracking-wideish text-gold-600">
+            {site.clinician.credentials}
           </p>
-          <p>
-            Before becoming a therapist I learned, as many of us do, that insight alone is not
-            always enough. The body keeps score. Families pass down survival strategies. Culture
-            and power shape what we are allowed to feel. Therapy here holds all of that.
-          </p>
-          <p>
-            Update this biography in <code>lib/site.ts</code> and this page with your training,
-            license, and the story you actually want clients to read. Keep it human. Credentials
-            belong here, but so does warmth.
-          </p>
+          <Rule className="my-8" />
+          <p className="text-xl leading-8 text-forest-800">{site.about.lede}</p>
+          {site.about.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
           <h2>Credentials</h2>
           <ul>
             <li>{site.clinician.credentials}</li>
+            <li>{site.clinician.education}</li>
             <li>{site.clinician.license}</li>
-            <li>Replace with graduate training, certifications, and professional memberships.</li>
           </ul>
+          <Button href="/contact" className="mt-4">
+            Request a consultation
+          </Button>
         </div>
-        <aside className="h-fit rounded-[2rem] bg-cream-100 p-8">
-          <p className="text-xs font-semibold uppercase tracking-wideish text-sage-600">
-            Practice details
-          </p>
-          <dl className="mt-6 space-y-5 text-sm">
-            <div>
-              <dt className="text-ink-400">Location</dt>
-              <dd className="mt-1 text-ink-800">{site.location.city}</dd>
-            </div>
-            <div>
-              <dt className="text-ink-400">Serving</dt>
-              <dd className="mt-1 text-ink-800">{site.location.serving}</dd>
-            </div>
-            <div>
-              <dt className="text-ink-400">Hours</dt>
-              <dd className="mt-1 text-ink-800">{site.contact.hours}</dd>
-            </div>
-          </dl>
-        </aside>
       </Container>
     </Section>
   );

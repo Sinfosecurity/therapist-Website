@@ -48,9 +48,9 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-3xl bg-sage-50 p-8 text-sage-900">
+      <div className="border border-parchment-200 bg-parchment-100 p-8 text-forest-900">
         <h2 className="font-display text-3xl">Thank you.</h2>
-        <p className="mt-3 leading-relaxed text-ink-600">
+        <p className="mt-3 leading-8 text-ink-700">
           Your note was received. I typically reply within two business days. If this is an
           emergency, please call 911 or 988 instead.
         </p>
@@ -153,7 +153,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm font-medium text-ink-800">{label}</span>
+      <span className="mb-2 block text-[11px] uppercase tracking-wideish text-ink-500">{label}</span>
       {children}
       {error ? <span className="mt-1 block text-sm text-clay-600">{error}</span> : null}
     </label>

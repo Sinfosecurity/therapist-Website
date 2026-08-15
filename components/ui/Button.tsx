@@ -4,11 +4,12 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 const styles = {
   primary:
-    "bg-sage-700 text-cream-50 hover:bg-sage-800 focus-visible:outline-sage-700",
+    "bg-forest-800 text-parchment-50 hover:bg-forest-900 focus-visible:outline-forest-800",
   secondary:
-    "bg-cream-100 text-sage-800 ring-1 ring-sage-200 hover:bg-cream-200 focus-visible:outline-sage-700",
-  ghost:
-    "bg-transparent text-sage-800 hover:bg-sage-50 focus-visible:outline-sage-700",
+    "bg-transparent text-forest-800 ring-1 ring-forest-800/30 hover:bg-forest-800 hover:text-parchment-50 focus-visible:outline-forest-800",
+  light:
+    "bg-parchment-50 text-forest-900 hover:bg-white focus-visible:outline-parchment-50",
+  ghost: "bg-transparent text-forest-800 hover:text-gold-600 focus-visible:outline-forest-800",
 };
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -25,7 +26,7 @@ export function Button({
   ...props
 }: Props) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60",
+    "inline-flex items-center justify-center gap-3 px-7 py-3.5 text-[11px] font-medium uppercase tracking-wideish transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60",
     styles[variant],
     className,
   );

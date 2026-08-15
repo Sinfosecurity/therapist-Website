@@ -12,19 +12,24 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-cream-200/80 bg-cream-50/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-content items-center justify-between px-5 py-4 sm:px-8">
-        <Link href="/" className="font-display text-2xl tracking-tight text-sage-800">
-          {site.shortName}
+    <header className="sticky top-0 z-50 border-b border-parchment-200/80 bg-parchment-50/85 backdrop-blur-md">
+      <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 sm:px-10">
+        <Link href="/" className="group">
+          <span className="block font-display text-[1.65rem] leading-none tracking-tight text-forest-900">
+            {site.shortName}
+          </span>
+          <span className="mt-1 block text-[10px] uppercase tracking-wideish text-gold-600">
+            Therapy
+          </span>
         </Link>
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm text-ink-600 transition-colors hover:text-sage-700",
-                pathname === item.href && "text-sage-800",
+                "text-[11px] uppercase tracking-wideish text-ink-500 transition-colors hover:text-forest-800",
+                pathname === item.href && "text-forest-900",
               )}
             >
               {item.label}
@@ -32,14 +37,14 @@ export function Header() {
           ))}
           <Link
             href="/contact"
-            className="rounded-full bg-sage-700 px-4 py-2 text-sm text-cream-50 hover:bg-sage-800"
+            className="bg-forest-800 px-5 py-2.5 text-[11px] uppercase tracking-wideish text-parchment-50 transition-colors hover:bg-forest-900"
           >
-            Book a consult
+            Consult
           </Link>
         </nav>
         <button
           type="button"
-          className="rounded-full p-2 text-sage-800 md:hidden"
+          className="p-2 text-forest-800 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -51,14 +56,14 @@ export function Header() {
       {open ? (
         <nav
           id="mobile-nav"
-          className="space-y-1 border-t border-cream-200 px-5 py-4 md:hidden"
+          className="space-y-1 border-t border-parchment-200 px-6 py-5 lg:hidden"
           aria-label="Mobile"
         >
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded-lg px-3 py-2 text-ink-800 hover:bg-cream-100"
+              className="block px-1 py-2 text-sm text-ink-800"
               onClick={() => setOpen(false)}
             >
               {item.label}

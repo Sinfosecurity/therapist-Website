@@ -2,25 +2,27 @@ export const site = {
   name: "Haven Path Therapy",
   shortName: "Haven Path",
   clinician: {
-    name: "Your Name, LMFT",
+    name: "Alex Rivera, LMFT",
+    firstName: "Alex",
     credentials: "Licensed Marriage and Family Therapist",
-    license: "License # — update in lib/site.ts",
+    license: "LMFT 000000 · Sample credentials — replace before launch",
+    education: "M.A., Marriage and Family Therapy",
   },
-  tagline: "A calm place to begin again.",
+  tagline: "A quiet place to begin again.",
   description:
-    "Thoughtful therapy for adults navigating anxiety, relationships, grief, and life transitions. Telehealth and in-person sessions.",
+    "Private therapy for adults and couples navigating anxiety, relationships, grief, and the seasons that ask more of you. Telehealth and in-person sessions.",
   url: "https://havenpath.example",
   location: {
     city: "Your City, ST",
-    serving: "Telehealth across [Your State] · In-person by appointment",
-    address: "Update street address in lib/site.ts",
+    serving: "Telehealth throughout the licensed state · In-person by appointment",
+    address: "Studio address — update in lib/site.ts",
   },
   contact: {
     email: "hello@havenpath.example",
     phone: "(555) 010-2040",
     hours: "Monday–Thursday, 10am–6pm",
   },
-  bookingUrl: "",
+  bookingUrl: "/contact",
   nav: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -29,64 +31,77 @@ export const site = {
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
   ],
+  hero: {
+    eyebrow: "Private psychotherapy",
+    title: "Therapy for the life that looks fine — and does not feel that way.",
+    lede: "A considered practice for adults who want more than coping. We work slowly, privately, and with the whole of you in the room.",
+  },
+  about: {
+    lede: "I work with people who are used to holding it together — and are tired of doing it alone.",
+    paragraphs: [
+      "Many of the people who find this practice are high-functioning on paper. They lead teams, care for families, and still wake at 3am with a tight chest. They are not looking for a pep talk. They want a room where the truth can be said without being fixed too quickly.",
+      "I trained as a marriage and family therapist because people do not heal in isolation. Even individual work is relational: the family you came from, the partner you cannot quite reach, the culture that taught you what you were allowed to feel.",
+      "Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
+    ],
+  },
   specialties: [
     {
       title: "Anxiety & overwhelm",
-      body: "For racing thoughts, tight chests, and the sense that you are always bracing for what comes next.",
+      body: "Racing thoughts, a braced body, and the sense that rest is something other people get to have.",
     },
     {
       title: "Depression & numbness",
-      body: "When motivation thins, joy feels far away, or everyday tasks start to cost more than they should.",
+      body: "When joy thins, motivation costs too much, and the days start to look the same.",
     },
     {
       title: "Relationships & attachment",
-      body: "Patterns in partnership, family, and friendship — including people-pleasing, conflict, and loneliness.",
+      body: "Conflict, people-pleasing, loneliness in partnership, and the old fear of being too much — or not enough.",
     },
     {
       title: "Life transitions",
-      body: "Career change, parenthood, relocation, identity shifts, and the in-between seasons that do not have a name yet.",
+      body: "Career change, parenthood, relocation, identity shifts, and the unnamed in-between.",
     },
     {
       title: "Grief & loss",
       body: "Death, breakup, illness, or the quieter grief of a life that did not go as planned.",
     },
     {
-      title: "Trauma & nervous system repair",
-      body: "Support for the body that still remembers — with pacing, consent, and no pressure to retell everything at once.",
+      title: "Trauma & the nervous system",
+      body: "Support for the body that still remembers — paced, consented, with no demand to retell everything at once.",
     },
   ],
   services: [
     {
       title: "Individual therapy",
       duration: "50 minutes",
-      fee: "$165",
-      body: "Weekly or biweekly sessions for adults. We go at a pace that respects your nervous system and your goals.",
+      fee: "$185",
+      body: "Weekly or biweekly sessions for adults. We set a pace that respects your nervous system and your actual life.",
     },
     {
       title: "Couples therapy",
       duration: "75 minutes",
-      fee: "$210",
-      body: "For partners who want clearer communication, repair after rupture, or help deciding what comes next.",
+      fee: "$240",
+      body: "For partners who want clearer speech, repair after rupture, or help deciding what comes next — together or apart.",
     },
     {
       title: "Consultation",
       duration: "20 minutes",
       fee: "Complimentary",
-      body: "A brief call to see whether this is a good fit. No pressure, no intake paperwork required to start.",
+      body: "A brief conversation to see whether this is a fit. No intake paperwork. No pressure to book.",
     },
   ],
   approach: [
     {
       title: "Collaborative",
-      body: "You are the expert on your life. I bring clinical training, curiosity, and a steady presence. We decide together what to work on.",
+      body: "You are the expert on your life. I bring clinical training, curiosity, and a steady presence. We decide the work together.",
     },
     {
       title: "Body-aware",
-      body: "Insight matters, and so does what happens in your chest, stomach, and jaw. We include the nervous system, not only the story.",
+      body: "Insight matters, and so does what happens in the chest, the jaw, the stomach. We include the nervous system, not only the story.",
     },
     {
       title: "Culturally humble",
-      body: "Identity, family history, faith, and power all shape how pain shows up. Therapy should make room for the whole of you.",
+      body: "Identity, family history, faith, and power shape how pain arrives. Therapy should make room for the whole of you.",
     },
   ],
   modalities: [
@@ -97,26 +112,43 @@ export const site = {
     "Somatic and mindfulness-based practices",
     "Trauma-informed care",
   ],
+  testimonials: [
+    {
+      quote:
+        "I did not have to perform insight. For the first time, someone waited with me until the real sentence arrived.",
+      attribution: "Individual client · composite",
+    },
+    {
+      quote:
+        "We stopped having the same fight in new clothes. The room made it possible to be honest without being cruel.",
+      attribution: "Couples client · composite",
+    },
+    {
+      quote:
+        "Slow was the point. I left sessions quieter, not more analyzed.",
+      attribution: "Individual client · composite",
+    },
+  ],
   faqs: [
     {
       q: "Do you take insurance?",
-      a: "This practice is currently private-pay. Superbills are available so you can seek out-of-network reimbursement. A limited sliding scale is offered based on availability.",
+      a: "This is a private-pay practice. Superbills are available for out-of-network reimbursement. A limited sliding scale is offered when there is room.",
     },
     {
       q: "Is this a crisis service?",
-      a: "No. If you are in immediate danger, call 911. In the U.S., you can also call or text 988 for the Suicide & Crisis Lifeline. Therapy here is for ongoing, scheduled care.",
+      a: "No. If you are in immediate danger, call 911. In the U.S., call or text 988 for the Suicide & Crisis Lifeline. This practice is for scheduled, ongoing care.",
     },
     {
       q: "Do you offer telehealth?",
-      a: "Yes. Secure video sessions are available for clients located in the licensed state(s) listed in the practice details. In-person sessions can be scheduled as well.",
+      a: "Yes. Secure video is available for clients located in the licensed state. In-person sessions can be scheduled as well.",
     },
     {
       q: "How often will we meet?",
-      a: "Most people begin weekly. As things stabilize we may shift to every other week. Frequency is something we revisit together.",
+      a: "Most people begin weekly. As things stabilize we may move to every other week. Frequency is something we revisit together.",
     },
     {
       q: "What if I am not sure therapy is for me?",
-      a: "That is a good reason to book a consultation. Fit matters more than a perfect first sentence. You can ask anything, including whether another clinician might be a better match.",
+      a: "That is a good reason to book a consultation. Fit matters more than a perfect first sentence. You may also ask whether another clinician would serve you better.",
     },
     {
       q: "How do cancellations work?",

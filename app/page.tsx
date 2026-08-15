@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/Button";
-import { Container, Eyebrow, Section } from "@/components/ui/Layout";
+import { Container, Eyebrow, Rule, Section } from "@/components/ui/Layout";
 import { site } from "@/lib/site";
-import { ArrowRight, HeartHandshake, Leaf, ShieldCheck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -11,61 +12,139 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.12]" />
-        <Container className="grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-2">
-          <div>
-            <Eyebrow>{site.clinician.credentials}</Eyebrow>
-            <h1 className="font-display text-5xl leading-tight text-sage-900 sm:text-6xl">
-              Therapy that makes room for the whole of you.
+      <section className="relative min-h-[88vh] overflow-hidden">
+        <Image
+          src="/images/hero-path.jpg"
+          alt="A quiet forest path in early morning light"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-900/80 via-forest-900/45 to-forest-900/20" />
+        <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.18]" />
+        <Container className="relative flex min-h-[88vh] items-end pb-20 pt-32">
+          <div className="max-w-3xl animate-rise text-parchment-50">
+            <Eyebrow>{site.hero.eyebrow}</Eyebrow>
+            <h1 className="font-display text-5xl font-medium leading-[1.08] sm:text-6xl lg:text-7xl">
+              {site.hero.title}
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-600">
-              {site.description} Sessions are unhurried, confidential, and paced with care.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact">
-                Request a consultation <ArrowRight className="h-4 w-4" />
+            <p className="mt-8 max-w-xl text-lg leading-8 text-parchment-100/90">{site.hero.lede}</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button href="/contact" variant="light">
+                Request a consultation <ArrowUpRight className="h-4 w-4" />
               </Button>
-              <Button href="/approach" variant="secondary">
-                How I work
+              <Button
+                href="/approach"
+                variant="secondary"
+                className="text-parchment-50 ring-parchment-50/40 hover:bg-parchment-50 hover:text-forest-900"
+              >
+                The approach
               </Button>
             </div>
-            <p className="mt-6 text-sm text-ink-400">{site.location.serving}</p>
-          </div>
-          <div className="rounded-[2rem] bg-sage-800 p-8 text-cream-50 shadow-soft sm:p-12">
-            <p className="font-display text-3xl leading-snug">
-              “You do not have to arrive with the right words. We can find them together.”
-            </p>
-            <p className="mt-6 text-sm text-sage-100">{site.clinician.name}</p>
-            <dl className="mt-10 grid grid-cols-2 gap-6 text-sm">
-              <div>
-                <dt className="text-sage-200">Session length</dt>
-                <dd className="mt-1 text-lg">50–75 minutes</dd>
-              </div>
-              <div>
-                <dt className="text-sage-200">Format</dt>
-                <dd className="mt-1 text-lg">Video or in person</dd>
-              </div>
-            </dl>
           </div>
         </Container>
       </section>
 
-      <Section className="bg-cream-100/70">
+      <Section>
+        <Container className="grid items-center gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[3/4] overflow-hidden">
+              <Image
+                src="/images/botanical.jpg"
+                alt="Olive branches against a warm wall"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+            </div>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <Eyebrow>The practice</Eyebrow>
+            <h2 className="font-display text-4xl leading-tight text-forest-900 sm:text-5xl">
+              {site.about.lede}
+            </h2>
+            <Rule className="mt-8" />
+            <p className="mt-8 text-[1.05rem] leading-8 text-ink-700">
+              {site.description} Sessions are confidential, paced with care, and held in a room —
+              or a screen — that does not rush you.
+            </p>
+            <p className="mt-6 text-sm text-ink-500">{site.location.serving}</p>
+            <Button href="/about" variant="secondary" className="mt-10">
+              Meet {site.clinician.firstName}
+            </Button>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="bg-parchment-100">
         <Container>
-          <Eyebrow>Specialties</Eyebrow>
-          <h2 className="max-w-2xl font-display text-4xl text-sage-900">
-            Support for the seasons that ask more of you.
-          </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {site.specialties.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-cream-200"
-              >
-                <h3 className="font-display text-2xl text-sage-800">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-600">{item.body}</p>
+          <div className="max-w-2xl">
+            <Eyebrow>Specialties</Eyebrow>
+            <h2 className="font-display text-4xl text-forest-900 sm:text-5xl">
+              Support for the seasons that ask more of you.
+            </h2>
+          </div>
+          <div className="mt-16 grid gap-x-12 gap-y-14 sm:grid-cols-2">
+            {site.specialties.map((item, index) => (
+              <article key={item.title} className="border-t border-parchment-300 pt-6">
+                <p className="text-[11px] uppercase tracking-wideish text-gold-600">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-display text-3xl text-forest-800">{item.title}</h3>
+                <p className="mt-3 leading-7 text-ink-700">{item.body}</p>
               </article>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <section className="relative h-[58vh] min-h-[420px]">
+        <Image
+          src="/images/office-light.jpg"
+          alt="A quiet studio with a linen chair and morning light"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-forest-900/25" />
+        <div className="absolute inset-x-0 bottom-0 p-8 sm:p-12">
+          <p className="font-display text-3xl text-parchment-50 sm:text-4xl">
+            A room designed to feel unhurried.
+          </p>
+        </div>
+      </section>
+
+      <Section>
+        <Container>
+          <Eyebrow>How the work feels</Eyebrow>
+          <div className="grid gap-12 lg:grid-cols-3">
+            {site.approach.map((item) => (
+              <article key={item.title}>
+                <Rule />
+                <h2 className="mt-6 font-display text-3xl text-forest-900">{item.title}</h2>
+                <p className="mt-4 leading-8 text-ink-700">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="bg-forest-900 text-parchment-50">
+        <Container>
+          <Eyebrow>In their words</Eyebrow>
+          <p className="mb-14 max-w-xl text-sm text-parchment-200/70">
+            Composite reflections, written to show the tone of the work — not testimonials from
+            identifiable clients.
+          </p>
+          <div className="grid gap-12 lg:grid-cols-3">
+            {site.testimonials.map((item) => (
+              <blockquote key={item.quote}>
+                <p className="font-display text-2xl leading-snug sm:text-3xl">“{item.quote}”</p>
+                <footer className="mt-6 text-[11px] uppercase tracking-wideish text-gold-400">
+                  {item.attribution}
+                </footer>
+              </blockquote>
             ))}
           </div>
         </Container>
@@ -73,43 +152,29 @@ export default function HomePage() {
 
       <Section>
         <Container className="grid gap-10 lg:grid-cols-3">
-          {[
-            {
-              icon: HeartHandshake,
-              title: "A steady relationship",
-              body: "Change happens in a relationship that feels safe enough to tell the truth. We build that first.",
-            },
-            {
-              icon: Leaf,
-              title: "Paced, not pushed",
-              body: "Insight without overwhelm. We work with your window of tolerance, not against it.",
-            },
-            {
-              icon: ShieldCheck,
-              title: "Clear and confidential",
-              body: "You will know the fee, the cancellation policy, and the limits of confidentiality before we begin.",
-            },
-          ].map((item) => (
-            <article key={item.title}>
-              <item.icon className="h-8 w-8 text-sage-600" aria-hidden />
-              <h2 className="mt-4 font-display text-3xl text-sage-900">{item.title}</h2>
-              <p className="mt-3 leading-relaxed text-ink-600">{item.body}</p>
+          {site.services.map((service) => (
+            <article key={service.title} className="border border-parchment-200 p-8">
+              <p className="text-[11px] uppercase tracking-wideish text-gold-600">
+                {service.duration}
+              </p>
+              <h2 className="mt-3 font-display text-3xl text-forest-900">{service.title}</h2>
+              <p className="mt-2 font-display text-2xl text-forest-700">{service.fee}</p>
+              <p className="mt-5 leading-7 text-ink-700">{service.body}</p>
             </article>
           ))}
         </Container>
       </Section>
 
-      <Section className="bg-sage-800 text-cream-50">
-        <Container className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          <div>
-            <h2 className="font-display text-4xl">Ready to take a first step?</h2>
-            <p className="mt-3 max-w-xl text-sage-100">
-              A complimentary 20-minute consultation is a low-pressure way to see whether we are a
-              good fit.
-            </p>
+      <Section className="bg-parchment-100">
+        <Container className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+          <div className="max-w-xl">
+            <Eyebrow>Begin</Eyebrow>
+            <h2 className="font-display text-4xl text-forest-900 sm:text-5xl">
+              A complimentary twenty minutes. No performance required.
+            </h2>
           </div>
-          <Button href="/contact" variant="secondary">
-            Get in touch
+          <Button href="/contact">
+            Write to the practice <ArrowUpRight className="h-4 w-4" />
           </Button>
         </Container>
       </Section>
