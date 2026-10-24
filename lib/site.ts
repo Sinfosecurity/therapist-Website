@@ -24,7 +24,7 @@ export const site = {
     address: "Chelsea, New York, NY · Exact studio address sent after we confirm a first session",
   },
   contact: {
-    email: "hello@lenawashingtontherapy.com",
+    email: "hello@drlenawashingtontherapy.com",
     phone: "(212) 555-0148",
     hours: "Tuesday–Friday, 10am–7pm ET",
   },
