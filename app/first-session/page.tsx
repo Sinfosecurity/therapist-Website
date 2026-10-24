@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "First session",
-  description: "What to expect when you begin therapy at Rowan Vale.",
+  description: "What to expect when you begin therapy with Lena Washington.",
 };
 
 export default function FirstSessionPage() {

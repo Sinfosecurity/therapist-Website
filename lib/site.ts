@@ -1,13 +1,13 @@
 export const site = {
-  name: "Rowan Vale Therapy",
-  shortName: "Rowan Vale",
+  name: "Lena Washington Therapy",
+  shortName: "Lena Washington",
   clinician: {
-    name: "Alex Rivera, LMFT",
-    firstName: "Alex",
+    name: "Lena Washington, LMFT",
+    firstName: "Lena",
     credentials: "Licensed Marriage and Family Therapist",
     license: "Licensed in New York State · LMFT",
     education: "M.A., Marriage and Family Therapy",
-    pronouns: "they/them",
+    pronouns: "she/her",
     memberships: [
       "American Association for Marriage and Family Therapy",
       "New York Association for Marriage and Family Therapy",
@@ -16,7 +16,7 @@ export const site = {
   tagline: "A quiet place to begin again.",
   description:
     "Private therapy in New York City for adults and couples navigating anxiety, relationships, grief, and the seasons that ask more of you. In-person in Chelsea and telehealth across New York State.",
-  url: "https://rowanvaletherapy.com",
+  url: "https://lenawashingtontherapy.com",
   location: {
     city: "New York, NY",
     neighborhood: "Chelsea, Manhattan",
@@ -24,7 +24,7 @@ export const site = {
     address: "Chelsea, New York, NY · Exact studio address sent after we confirm a first session",
   },
   contact: {
-    email: "hello@rowanvaletherapy.com",
+    email: "hello@lenawashingtontherapy.com",
     phone: "(212) 555-0148",
     hours: "Tuesday–Friday, 10am–7pm ET",
   },
@@ -48,7 +48,7 @@ export const site = {
     paragraphs: [
       "Many of the people who find this practice are high-functioning on paper. They lead teams, care for families, and still wake at 3am with a tight chest. They are not looking for a pep talk. They want a room where the truth can be said without being fixed too quickly.",
       "I trained as a marriage and family therapist because people do not heal in isolation. Even individual work is relational: the family you came from, the partner you cannot quite reach, the culture that taught you what you were allowed to feel.",
-      "Rowan Vale is based in Chelsea, with in-person sessions by appointment and secure telehealth for clients anywhere in New York State. Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
+      "The practice is based in Chelsea, with in-person sessions by appointment and secure telehealth for clients anywhere in New York State. Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
     ],
   },
   firstSession: [
@@ -113,7 +113,7 @@ export const site = {
   ],
   insurance: {
     summary:
-      "Rowan Vale is a private-pay practice. I do not bill insurance directly. After each paid session I can provide a superbill so you may seek out-of-network reimbursement from your plan.",
+      "This is a private-pay practice. I do not bill insurance directly. After each paid session I can provide a superbill so you may seek out-of-network reimbursement from your plan.",
     notes: [
       "HSA and FSA cards are accepted for session fees.",
       "A limited sliding scale is offered when there is room on the caseload. Ask during the consult.",
