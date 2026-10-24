@@ -1,4 +1,4 @@
-# Lena Washington Therapy
+# Dr Lena Washington Therapy
 
 Private psychotherapy practice site for **Chelsea, New York City**. Next.js, TypeScript, and Tailwind CSS.
 

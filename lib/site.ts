@@ -1,8 +1,8 @@
 export const site = {
-  name: "Lena Washington Therapy",
-  shortName: "Lena Washington",
+  name: "Dr Lena Washington Therapy",
+  shortName: "Dr Lena Washington",
   clinician: {
-    name: "Lena Washington, LMFT",
+    name: "Dr Lena Washington, LMFT",
     firstName: "Lena",
     credentials: "Licensed Marriage and Family Therapist",
     license: "Licensed in New York State · LMFT",
@@ -39,7 +39,7 @@ export const site = {
     { href: "/contact", label: "Contact" },
   ],
   hero: {
-    eyebrow: "Lena Washington, LMFT · New York City",
+    eyebrow: "Dr Lena Washington, LMFT · New York City",
     title: "Therapy for the life that looks fine — and does not feel that way.",
     lede: "A considered Chelsea practice for adults who want more than coping. We work slowly, privately, and with the whole of you in the room.",
   },

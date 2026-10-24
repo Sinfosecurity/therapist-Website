@@ -22,7 +22,7 @@ export default function OpenGraphImage() {
           New York City
         </div>
         <div style={{ fontSize: 84, fontFamily: "Georgia, serif", lineHeight: 1.05, marginTop: 16 }}>
-          Lena Washington Therapy
+          Dr Lena Washington Therapy
         </div>
         <div style={{ fontSize: 28, marginTop: 24, maxWidth: 760, color: "#E7DCC8" }}>
           A quiet place to begin again.
