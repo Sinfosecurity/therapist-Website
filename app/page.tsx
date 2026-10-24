@@ -25,7 +25,9 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-0 bg-grain opacity-[0.18]" />
         <Container className="relative flex min-h-[88vh] items-end pb-20 pt-32">
           <div className="max-w-3xl animate-rise text-parchment-50">
-            <Eyebrow>{site.hero.eyebrow}</Eyebrow>
+            <Eyebrow className="text-parchment-100 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
+              {site.hero.eyebrow}
+            </Eyebrow>
             <h1 className="font-display text-5xl font-medium leading-[1.08] sm:text-6xl lg:text-7xl">
               {site.hero.title}
             </h1>
