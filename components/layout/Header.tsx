@@ -14,12 +14,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-parchment-200/80 bg-parchment-50/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 sm:px-10">
-        <Link href="/" className="group" onClick={() => setOpen(false)}>
-          <span className="block font-display text-[1.35rem] leading-none tracking-tight text-forest-900 sm:text-[1.65rem]">
-            {site.shortName}
-          </span>
-          <span className="mt-1 block text-[10px] uppercase tracking-wideish text-gold-600">
-            Therapy
+        <Link href="/" className="group max-w-[13rem] sm:max-w-none" onClick={() => setOpen(false)}>
+          <span className="block font-display text-[1.35rem] leading-[1.1] tracking-tight text-forest-900 sm:text-[1.7rem]">
+            {site.name}
           </span>
         </Link>
         <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Primary">

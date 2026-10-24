@@ -1,6 +1,6 @@
 export const site = {
   name: "Dr Lena Washington Therapy",
-  shortName: "Dr Lena Washington",
+  shortName: "Dr Lena Washington Therapy",
   clinician: {
     name: "Dr Lena Washington, LMFT",
     firstName: "Lena",
