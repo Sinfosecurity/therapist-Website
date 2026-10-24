@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-parchment-50 text-ink-800 antialiased;
+}
+
+::selection {
+  background: #d5e0d7;
+  color: #14211a;
+}
+
+.input {
+  @apply w-full rounded-none border-0 border-b border-parchment-300 bg-transparent px-0 py-3 text-sm text-ink-800 outline-none transition-colors focus:border-forest-600;
+}
+
+.prose-site p {
+  @apply mb-5 text-[1.05rem] leading-8 text-ink-700;
+}
+
+.prose-site h2 {
+  @apply mb-4 mt-12 font-display text-3xl text-forest-900;
+}
+
+.prose-site ul {
+  @apply mb-5 list-disc space-y-2 pl-5 text-ink-700;
+}
+
+.prose-site code {
+  @apply text-sm text-forest-700;
+}
