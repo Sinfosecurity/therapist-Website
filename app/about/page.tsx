@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Meet ${site.clinician.name}.`,
+  description: `Meet ${site.clinician.name}, a New York State licensed therapist in Chelsea.`,
 };
 
 export default function AboutPage() {
@@ -17,13 +17,34 @@ export default function AboutPage() {
           <div className="relative aspect-[3/4] overflow-hidden">
             <Image
               src="/images/botanical.jpg"
-              alt="Botanical still life in the studio"
+              alt="Olive branches in the Chelsea studio"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 40vw, 100vw"
               priority
             />
           </div>
+          <aside className="mt-8 border border-parchment-200 p-8">
+            <p className="text-[11px] uppercase tracking-wideish text-gold-600">Practice details</p>
+            <dl className="mt-6 space-y-5 text-sm">
+              <div>
+                <dt className="text-ink-400">Studio</dt>
+                <dd className="mt-1 text-ink-800">{site.location.neighborhood}</dd>
+              </div>
+              <div>
+                <dt className="text-ink-400">Serving</dt>
+                <dd className="mt-1 text-ink-800">{site.location.serving}</dd>
+              </div>
+              <div>
+                <dt className="text-ink-400">Hours</dt>
+                <dd className="mt-1 text-ink-800">{site.contact.hours}</dd>
+              </div>
+              <div>
+                <dt className="text-ink-400">Pronouns</dt>
+                <dd className="mt-1 text-ink-800">{site.clinician.pronouns}</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
         <div className="prose-site lg:col-span-6 lg:col-start-7">
           <Eyebrow>About</Eyebrow>
@@ -43,10 +64,16 @@ export default function AboutPage() {
             <li>{site.clinician.credentials}</li>
             <li>{site.clinician.education}</li>
             <li>{site.clinician.license}</li>
+            {site.clinician.memberships.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
-          <Button href="/contact" className="mt-4">
-            Request a consultation
-          </Button>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button href="/contact">Request a consultation</Button>
+            <Button href="/first-session" variant="secondary">
+              First session
+            </Button>
+          </div>
         </div>
       </Container>
     </Section>

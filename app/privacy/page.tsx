@@ -13,27 +13,28 @@ export default function PrivacyPage() {
         <Eyebrow>Legal</Eyebrow>
         <h1 className="mb-6 font-display text-5xl text-forest-900">Privacy</h1>
         <p>
-          {site.name} treats your information with care. This page is a starting point, not legal
-          advice. Have an attorney review it before you go live, and add a HIPAA Notice of Privacy
-          Practices if you are a covered entity.
+          {site.name} treats the information you share with care. This notice describes how the
+          website handles inquiries. Once you become a client, confidentiality is also governed by
+          New York law, professional ethics, and — where it applies — a HIPAA Notice of Privacy
+          Practices provided at intake.
         </p>
         <h2>What this site collects</h2>
         <p>
-          The contact form collects the name, email, phone number, and message you choose to send.
-          A hidden honeypot field is used only to reduce spam. Server logs may include IP address
-          and browser information.
+          The contact form collects the name, email, optional phone number, and message you choose
+          to send. A hidden honeypot field is used only to reduce spam. Server logs may include IP
+          address and browser information.
         </p>
         <h2>How messages are used</h2>
         <p>
           Inquiries are used to respond to you and to decide whether the practice is a good fit.
-          They are not sold. Do not send detailed health information through this website.
+          They are not sold or used for advertising. Do not send detailed health information through
+          this website. Email is not a therapy session.
         </p>
         <h2>Therapy confidentiality</h2>
         <p>
-          Once you become a client, confidentiality is governed by professional ethics, state law,
-          and (where applicable) HIPAA. Limits typically include risk of harm, suspected abuse of a
-          child or vulnerable adult, and court orders. Those limits will be reviewed in your intake
-          paperwork.
+          What you share in session is confidential, with the usual legal limits: risk of harm to
+          yourself or others, suspected abuse of a child or vulnerable adult, and valid court
+          orders. Those limits are reviewed in writing before we begin.
         </p>
         <h2>Contact</h2>
         <p>Questions about this notice can be sent to {site.contact.email}.</p>

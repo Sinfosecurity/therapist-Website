@@ -38,6 +38,10 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed.data),
       });
+      if (response.status === 429) {
+        setStatus("error");
+        return;
+      }
       if (!response.ok) throw new Error("Request failed");
       setStatus("sent");
       setValues(initial);

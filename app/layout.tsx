@@ -25,10 +25,23 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "therapist New York City",
+    "LMFT Chelsea",
+    "anxiety therapy NYC",
+    "couples therapy Manhattan",
+    "telehealth New York",
+  ],
   openGraph: {
     title: site.name,
     description: site.description,
     type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
   },
 };
 

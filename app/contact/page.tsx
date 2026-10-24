@@ -24,10 +24,19 @@ export default function ContactPage() {
           </p>
           <Rule className="my-8" />
           <ul className="space-y-2 text-sm text-ink-700">
-            <li>{site.contact.email}</li>
-            <li>{site.contact.phone}</li>
+            <li>
+              <a className="hover:text-forest-800" href={`mailto:${site.contact.email}`}>
+                {site.contact.email}
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-forest-800" href="tel:+12125550148">
+                {site.contact.phone}
+              </a>
+            </li>
             <li>{site.contact.hours}</li>
             <li>{site.location.serving}</li>
+            <li>{site.location.address}</li>
           </ul>
           <div className="relative mt-12 hidden aspect-[4/3] overflow-hidden lg:block">
             <Image

@@ -14,7 +14,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-parchment-200/80 bg-parchment-50/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-5 sm:px-10">
-        <Link href="/" className="group">
+        <Link href="/" className="group" onClick={() => setOpen(false)}>
           <span className="block font-display text-[1.65rem] leading-none tracking-tight text-forest-900">
             {site.shortName}
           </span>
@@ -22,7 +22,7 @@ export function Header() {
             Therapy
           </span>
         </Link>
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Primary">
           {site.nav.map((item) => (
             <Link
               key={item.href}
@@ -69,6 +69,13 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/contact"
+            className="mt-3 inline-flex bg-forest-800 px-5 py-2.5 text-[11px] uppercase tracking-wideish text-parchment-50"
+            onClick={() => setOpen(false)}
+          >
+            Consult
+          </Link>
         </nav>
       ) : null}
     </header>

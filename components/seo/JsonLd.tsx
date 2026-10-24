@@ -9,11 +9,21 @@ export function JsonLd() {
     url: site.url,
     telephone: site.contact.phone,
     email: site.contact.email,
+    image: `${site.url}/images/hero-path.jpg`,
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      addressLocality: site.location.city,
+      addressLocality: "New York",
+      addressRegion: "NY",
+      addressCountry: "US",
     },
+    areaServed: ["New York City", "New York State"],
     medicalSpecialty: "Psychotherapy",
+    founder: {
+      "@type": "Person",
+      name: site.clinician.name,
+      jobTitle: site.clinician.credentials,
+    },
   };
 
   return (

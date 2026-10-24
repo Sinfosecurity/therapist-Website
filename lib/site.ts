@@ -7,20 +7,26 @@ export const site = {
     credentials: "Licensed Marriage and Family Therapist",
     license: "Licensed in New York State · LMFT",
     education: "M.A., Marriage and Family Therapy",
+    pronouns: "they/them",
+    memberships: [
+      "American Association for Marriage and Family Therapy",
+      "New York Association for Marriage and Family Therapy",
+    ],
   },
   tagline: "A quiet place to begin again.",
   description:
-    "Private therapy in New York City for adults and couples navigating anxiety, relationships, grief, and the seasons that ask more of you. In-person in NYC and telehealth across New York State.",
-  url: "https://rowanvale.example",
+    "Private therapy in New York City for adults and couples navigating anxiety, relationships, grief, and the seasons that ask more of you. In-person in Chelsea and telehealth across New York State.",
+  url: "https://rowanvaletherapy.com",
   location: {
     city: "New York, NY",
-    serving: "In-person in New York City · Telehealth throughout New York State",
-    address: "New York, NY · Studio visits by appointment",
+    neighborhood: "Chelsea, Manhattan",
+    serving: "In-person in Chelsea · Telehealth throughout New York State",
+    address: "Chelsea, New York, NY · Exact studio address sent after we confirm a first session",
   },
   contact: {
-    email: "hello@rowanvale.example",
+    email: "hello@rowanvaletherapy.com",
     phone: "(212) 555-0148",
-    hours: "Tuesday–Friday, 10am–7pm",
+    hours: "Tuesday–Friday, 10am–7pm ET",
   },
   bookingUrl: "/contact",
   nav: [
@@ -28,22 +34,37 @@ export const site = {
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/approach", label: "Approach" },
+    { href: "/first-session", label: "First session" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
   ],
   hero: {
     eyebrow: "Private psychotherapy · New York City",
     title: "Therapy for the life that looks fine — and does not feel that way.",
-    lede: "A considered New York practice for adults who want more than coping. We work slowly, privately, and with the whole of you in the room.",
+    lede: "A considered Chelsea practice for adults who want more than coping. We work slowly, privately, and with the whole of you in the room.",
   },
   about: {
     lede: "I work with people who are used to holding it together — and are tired of doing it alone.",
     paragraphs: [
       "Many of the people who find this practice are high-functioning on paper. They lead teams, care for families, and still wake at 3am with a tight chest. They are not looking for a pep talk. They want a room where the truth can be said without being fixed too quickly.",
       "I trained as a marriage and family therapist because people do not heal in isolation. Even individual work is relational: the family you came from, the partner you cannot quite reach, the culture that taught you what you were allowed to feel.",
-      "The practice is based in New York City, with in-person sessions by appointment and secure telehealth for clients anywhere in New York State. Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
+      "Rowan Vale is based in Chelsea, with in-person sessions by appointment and secure telehealth for clients anywhere in New York State. Sessions are unhurried. We pay attention to language, to the body, and to the patterns that once kept you safe and now keep you small. You do not need the right words to begin.",
     ],
   },
+  firstSession: [
+    {
+      title: "A brief consult",
+      body: "We begin with a complimentary twenty-minute call. You can ask anything — fees, pacing, whether couples work is a fit. If I am not the right clinician, I will say so and, when I can, point you toward someone who might be.",
+    },
+    {
+      title: "Paperwork, then the room",
+      body: "If we continue, you receive a secure intake packet: consent, privacy limits, and a short history form. The first full session is not an interrogation. We start where you are that day.",
+    },
+    {
+      title: "What you can expect of me",
+      body: "I will be on time, prepared, and clear about what I can and cannot hold. I do not assign homework for its own sake. If something is not working, we name it.",
+    },
+  ],
   specialties: [
     {
       title: "Anxiety & overwhelm",
@@ -90,6 +111,15 @@ export const site = {
       body: "A brief conversation to see whether this is a fit. No intake paperwork. No pressure to book.",
     },
   ],
+  insurance: {
+    summary:
+      "Rowan Vale is a private-pay practice. I do not bill insurance directly. After each paid session I can provide a superbill so you may seek out-of-network reimbursement from your plan.",
+    notes: [
+      "HSA and FSA cards are accepted for session fees.",
+      "A limited sliding scale is offered when there is room on the caseload. Ask during the consult.",
+      "You are responsible for confirming coverage with your insurer before we begin.",
+    ],
+  },
   approach: [
     {
       title: "Collaborative",
@@ -132,7 +162,7 @@ export const site = {
   faqs: [
     {
       q: "Do you take insurance?",
-      a: "This is a private-pay practice. Superbills are available for out-of-network reimbursement. A limited sliding scale is offered when there is room.",
+      a: "This is a private-pay practice. Superbills are available for out-of-network reimbursement. HSA and FSA cards are accepted. A limited sliding scale is offered when there is room.",
     },
     {
       q: "Is this a crisis service?",
@@ -140,11 +170,19 @@ export const site = {
     },
     {
       q: "Do you offer telehealth?",
-      a: "Yes. Secure video is available for clients physically located in New York State. In-person sessions are held in New York City by appointment.",
+      a: "Yes. Secure video is available for clients physically located in New York State at the time of session. In-person sessions are held in a private Chelsea studio by appointment.",
+    },
+    {
+      q: "Where is the studio?",
+      a: "In Chelsea, Manhattan. The exact address and entry instructions are sent once we confirm a first session, so the space stays private.",
     },
     {
       q: "How often will we meet?",
       a: "Most people begin weekly. As things stabilize we may move to every other week. Frequency is something we revisit together.",
+    },
+    {
+      q: "Who do you work with?",
+      a: "Adults and couples. I do not currently see children or adolescents.",
     },
     {
       q: "What if I am not sure therapy is for me?",

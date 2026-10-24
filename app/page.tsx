@@ -173,9 +173,14 @@ export default function HomePage() {
               A complimentary twenty minutes. No performance required.
             </h2>
           </div>
-          <Button href="/contact">
-            Write to the practice <ArrowUpRight className="h-4 w-4" />
-          </Button>
+          <div className="flex flex-wrap gap-3">
+            <Button href="/contact">
+              Write to the practice <ArrowUpRight className="h-4 w-4" />
+            </Button>
+            <Button href="/first-session" variant="secondary">
+              First session
+            </Button>
+          </div>
         </Container>
       </Section>
     </>
