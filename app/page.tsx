@@ -73,7 +73,7 @@ export default function HomePage() {
             </p>
             <p className="mt-6 text-sm text-ink-500">{site.location.serving}</p>
             <Button href="/about" variant="secondary" className="mt-10">
-              Meet {site.clinician.firstName}
+              Meet Dr Lena Washington
             </Button>
           </div>
         </Container>
@@ -134,7 +134,7 @@ export default function HomePage() {
 
       <Section className="bg-forest-900 text-parchment-50">
         <Container>
-          <Eyebrow>In their words</Eyebrow>
+          <Eyebrow className="text-gold-400">In their words</Eyebrow>
           <p className="mb-14 max-w-xl text-sm text-parchment-200/70">
             Composite reflections, written to show the tone of the work — not testimonials from
             identifiable clients.
